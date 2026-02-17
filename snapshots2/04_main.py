@@ -86,7 +86,7 @@ async def read_items_optional(q: Optional[str] = None):
 
 # 6. 쿼리 매개변수 타입 변환 및 필수 매개변수
 # price 쿼리 매개변수는 float 타입이어야 하고, is_offer는 boolean 타입이어야 합니다.
-# description은 필수 쿼리 매개변수입니다. (기본값이 없으므로)
+# description, price은 필수 쿼리 매개변수입니다. (기본값이 없으므로)
 @app.get("/items-validation/")
 async def read_items_with_validation(description: str, price: float, is_offer: Optional[bool] = None):
     item_info = {
